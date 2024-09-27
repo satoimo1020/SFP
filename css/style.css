@@ -301,7 +301,7 @@ form button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color
+    transition: background-color /*????????????????*/
 }
 
 form button:hover {
