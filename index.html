@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学園祭 飲食店</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- ローディング画面 -->
+    <div id="loading" class="loading">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+    <!-- 背景アニメーション -->
+    <div class="background-shapes">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+    </div>
+    <!-- ナビゲーション用ボタン -->
+    <button id="nav-toggle" class="nav-toggle">☰</button>
+
+    <!-- ナビゲーションメニュー -->
+    <div id="navigation-menu" class="navigation-menu">
+        <nav>
+            <ul>
+                <li><a href="#about">私たちについて</a></li>
+                <li><a href="#menu">メニュー</a></li>
+                <li><a href="#schedule">スケジュール</a></li>
+                <li><a href="#team">スタッフ紹介</a></li>
+                <li><a href="#gallery">ギャラリー</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
+    <header>
+        <div class="container">
+            <h1>学園祭 飲食ブースへようこそ</h1>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>私たちについて</h2>
+            <p>私たちのブースでは、学園祭期間中に特別な料理を提供します。新鮮な食材を使い、学生たちが心を込めて作った料理をお楽しみください。</p>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <div class="container">
+            <h2>メニュー</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>タコ焼き</h3>
+                    <p>カリカリの外側とトロトロの中身が魅力のタコ焼き。</p>
+                </div>
+                <div class="menu-item">
+                    <h3>焼きそば</h3>
+                    <p>ボリュームたっぷりのソース焼きそば。</p>
+                </div>
+                <div class="menu-item">
+                    <h3>クレープ</h3>
+                    <p>フルーツやクリームをたっぷり使った甘いクレープ。</p>
+                </div>
+                <div class="menu-item">
+                    <h3>お好み焼き</h3>
+                    <p>キャベツたっぷりのふんわりお好み焼き。</p>
+                </div>
+                <div class="menu-item">
+                    <h3>からあげ</h3>
+                    <p>外はカリッと中はジューシーな唐揚げ。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="section">
+        <div class="container">
+            <h2>スケジュール</h2>
+            <ul>
+                <li>10:00 - オープニングセレモニー</li>
+                <li>11:00 - 料理デモンストレーション</li>
+                <li>12:00 - 抽選会</li>
+                <li>14:00 - 料理コンテスト</li>
+                <li>16:00 - クロージングイベント</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="team" class="section">
+        <div class="container">
+            <h2>スタッフ紹介</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>田中 太郎</h3>
+                    <p>チームのリーダーであり、全ての料理の監督を担当しています。</p>
+                </div>
+                <div class="team-member">
+                    <h3>鈴木 花子</h3>
+                    <p>デザート担当。クレープを主に作っています。</p>
+                </div>
+                <div class="team-member">
+                    <h3>佐藤 次郎</h3>
+                    <p>予算管理と材料の調達を担当しています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>ギャラリー</h2>
+            <div class="gallery-grid">
+                <img src="takoyaki.jpg" alt="タコ焼き">
+                <img src="yakisoba.jpg" alt="焼きそば">
+                <img src="crepe.jpg" alt="クレープ">
+                <img src="okonomiyaki.jpg" alt="お好み焼き">
+                <img src="karaage.jpg" alt="からあげ">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>お問い合わせ</h2>
+            <form action="#" method="post">
+                <label for="name">お名前:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">メッセージ:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">送信</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 学園祭飲食ブース. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
