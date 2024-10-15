@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学園祭 飲食店</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -33,7 +35,6 @@
                 <li><a href="#schedule">スケジュール</a></li>
                 <li><a href="#team">スタッフ紹介</a></li>
                 <li><a href="#gallery">ギャラリー</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
             </ul>
         </nav>
     </div>
@@ -43,16 +44,18 @@
         </div>
     </header>
 
-    <section id="about" class="section">
+    <section id="about" class="section main-section">
         <div class="container">
-            <h2>私たちについて</h2>
-            <p>私たちのブースでは、学園祭期間中に特別な料理を提供します。新鮮な食材を使い、学生たちが心を込めて作った料理をお楽しみください。</p>
+            <h2>About Us <span class="subtitle">- 私たちについて -</span></h2>
+            <p>私たちIT1Bでは、学園祭期間中にベビーカステラを提供します！</p>
+            <br>
+            <p>祭りで定番のベビーカステラをたくさんご用意しています。以下の特徴をぜひチェックしてください！</p>
         </div>
     </section>
 
     <section id="menu" class="section">
         <div class="container">
-            <h2>メニュー</h2>
+            <h2>Menu <span class="subtitle">- メニュー -</span></h2>
             <div class="menu-grid">
                 <div class="menu-item hidden">
                     <h3>タコ焼き</h3>
@@ -80,7 +83,7 @@
 
     <section id="schedule" class="section">
         <div class="container">
-            <h2>スケジュール</h2>
+            <h2>Schedule <span class="subtitle">- スケジュール -</span></h2>
             <ul>
                 <li>10:00 - オープニングセレモニー</li>
                 <li>11:00 - 料理デモンストレーション</li>
@@ -93,7 +96,7 @@
 
     <section id="team" class="section">
         <div class="container">
-            <h2>スタッフ紹介</h2>
+            <h2>Team <span class="subtitle">- スタッフ紹介 -</span></h2>
             <div class="team-grid">
                 <div class="team-member hidden">
                     <h3>田中 太郎</h3>
@@ -113,29 +116,14 @@
 
     <section id="gallery" class="section">
         <div class="container">
-            <h2>ギャラリー</h2>
+            <h2>Gallery <span class="subtitle">- ギャラリー -</span></h2>
             <div class="gallery-grid">
-                <img src="takoyaki.jpg" alt="タコ焼き">
-                <img src="yakisoba.jpg" alt="焼きそば">
-                <img src="crepe.jpg" alt="クレープ">
-                <img src="okonomiyaki.jpg" alt="お好み焼き">
-                <img src="karaage.jpg" alt="からあげ">
+                <img src="../img/1.jpg" alt="タコ焼き">
+                <img src="../img/2.jpg" alt="焼きそば">
+                <img src="../img/3.jpg" alt="クレープ">
+                <img src="../img/4.jpg" alt="お好み焼き">
+                <img src="../img/5.jpg" alt="からあげ">
             </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>お問い合わせ</h2>
-            <form action="#" method="post">
-                <label for="name">お名前:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">メールアドレス:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">メッセージ:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">送信</button>
-            </form>
         </div>
     </section>
 

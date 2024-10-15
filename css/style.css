@@ -24,6 +24,7 @@
     border-top: 5px solid #3498db;
     border-radius: 50%;
     animation: spin 1s linear infinite;
+    margin: auto;
 }
 
 /* スピナーの回転アニメーション */
@@ -98,37 +99,6 @@
 
 
 
-
-
-
-
-
-
-
-/*body {
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: aliceblue;
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-    margin: 5%;
-}
-
-h2 {
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: aliceblue;
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-    margin: 5%;
-}*/
-
-
 * {
     margin: 0;
     padding: 0;
@@ -136,12 +106,21 @@ h2 {
 }
 
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0;
+    background-image: url('../img/background_texture.jpg');
+    background-size: auto;
+    background-repeat: repeat;
     color: #333;
-    padding: 0 20px;
+    padding: 0;
+    font-weight: 300;
 }
+
+h1, h2, h3 {
+    font-family: 'Sawarabi Gothic', sans-serif;
+}
+
+
 
 /* 左上に固定されるナビゲーションボタン */
 .nav-toggle {
@@ -162,15 +141,16 @@ body {
 .navigation-menu {
     position: fixed;
     top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100vh; /* ビューの高さを100%に設定 */
+    left: 0;
+    width: 30%; /* ナビゲーションの幅を30%に設定 */
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: left 0.3s ease;
-    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999; 
 }
 
 .navigation-menu nav ul {
@@ -178,8 +158,10 @@ body {
     text-align: center;
 }
 
+/* 各リストアイテムをブロック要素として表示 */
 .navigation-menu nav ul li {
     margin: 20px 0;
+    display: block; 
 }
 
 .navigation-menu nav ul li a {
@@ -188,9 +170,9 @@ body {
     text-decoration: none;
 }
 
-/* ナビゲーションメニューが表示されたとき */
+/* ナビゲーションメニューがアクティブになり、左から表示*/
 .navigation-menu.active {
-    left: 0;
+    transform: translateX(0); /* 左からスライドして表示 */
 }
 
 header {
@@ -231,23 +213,31 @@ nav ul li a:hover {
     color: #ff9800;
 }
 
+.main-section {
+    background-color: #fff;
+}
+
+.main-section p {
+    text-align: center;
+}
+
 .section {
     padding: 60px 0;
-    background-color: #fff;
     margin-bottom: 30px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .section h2 {
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 20px;
     color: #333;
 }
 
 p, ul {
-    font-size: 1.1em;
-    color: #555;
+    font-size: 1.2em;
+    color: #333;
+    line-height: 2.1;
+    list-style-type: none;
 }
 
 .menu-grid, .team-grid, .gallery-grid {
@@ -310,7 +300,7 @@ form button:hover {
 
 footer {
     width: 100%;
-    background-color: #333;
+    background-image: url('../img/wood_grain_texture.jpg');
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -319,6 +309,7 @@ footer {
 
 footer p {
     margin: 0;
+    color: #999;
 }
 
 /* スムーズスクロールのためのCSS */
@@ -327,6 +318,13 @@ html {
 }
 
 /* メディアクエリでレスポンシブ対応 */
+@media (max-width: 850px) {
+    .navigation-menu {
+        display: flex;
+        width: 60%;
+    }
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2em;
@@ -334,20 +332,72 @@ html {
 
     nav ul li {
         display: block;
-        margin: 10px 0;
+        margin: 15px 0;
+    }
+
+    .main-section p {
+        text-align: start;
     }
 
     .container {
-        width: 90%;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 1.1em;
+        padding: 10px 20px;
+    }
+
+    .section h2 {
+        font-size: 2.4em;
+    }
+
+    .nav-toggle {
+        font-size: 1.5em;
     }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.8em;
+    .navigation-menu {
+        width: 100%;
     }
 
-    .section h2 {
-        font-size: 1.8em;
+    .navigation-menu nav ul li a {
+        font-size: 1.9em; 
+        padding: 10px; 
+        text-align: center;
     }
+
+    .container {
+        width: 100%; 
+        padding: 15px;
+    }
+}
+
+
+
+h2 {
+    position: relative; /* ラインを引くための位置指定 */
+    padding-bottom: 10px; /* ラインとテキストの間隔 */
+}
+
+h2 .subtitle {
+    font-size: 0.4em; /* サブタイトルのサイズ */
+    color: #555; /* サブタイトルの色 */
+    margin-left: 10px; /* サブタイトルの左余白 */
+    font-weight: 300;
+}
+
+h2::after {
+    content: ""; /* 空のコンテンツを生成 */
+    display: block; /* ブロック要素として表示 */
+    height: 0.5px; /* ラインの高さ */
+    background-color: rgba(9, 9, 9, 0.3); /* ラインの色 */
+    position: absolute; /* 絶対位置 */
+    left: 0; /* 左端に配置 */
+    right: 0; /* 右端に配置 */
+    bottom: 0; /* テキストの下に配置 */
+    margin: auto; /* 中央寄せ */
+    width: 99%; /* 幅を100% */
 }
