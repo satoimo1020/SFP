@@ -1,3 +1,17 @@
+$(document).ready(function(){
+    $('.bxslider').bxSlider({
+        mode: 'horizontal',
+        moveSlides: 1,
+        slideMargin: 40,
+        infiniteLoop: true,
+        minSlides: 1,
+        maxSlides: 1,
+        speed: 800,
+        auto: true
+    });
+});
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const elements = document.querySelectorAll('.hidden');
 
