@@ -72,26 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const navigationMenu = document.getElementById('navigation-menu');
     const body = document.body;
 
-    // スムーズスクロールの設定
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault(); // デフォルトのリンク動作を無効化
-            const targetId = this.getAttribute('href').substring(1); // クリックしたリンクのhrefからターゲットIDを取得
-            const targetSection = document.getElementById(targetId); // ターゲットIDに対応するセクションを取得
-
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 50, // セクションの上部位置までスクロール
-                    behavior: 'smooth' // スムーズスクロール
-                });
-            }
-
-            // ナビゲーションを非表示にする
-            navigationMenu.classList.remove('active');
-            body.style.overflow = 'auto'; // スクロールを元に戻す
-        });
-    });
-
     // ナビゲーションのトグル
     navToggle.addEventListener('click', function() {
         navigationMenu.classList.toggle('active');
