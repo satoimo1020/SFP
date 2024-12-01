@@ -83,7 +83,6 @@
 }
 
 
-
 /* コンテンツ生成アニメーション */
 .hidden {
     opacity: 0;
@@ -97,8 +96,7 @@
     transition: opacity 0.5s ease-in, transform 0.5s ease-in;
 }
 
-
-
+/* メイン */
 * {
     margin: 0;
     padding: 0;
@@ -123,8 +121,6 @@ h1, h2, h3 {
 h3 {
     font-size: 1.4em;
 }
-
-
 
 /* 左上に固定されるナビゲーションボタン */
 .nav-toggle {
@@ -371,8 +367,7 @@ html {
     }
 }
 
-
-
+/* 追加 */
 h2 {
     position: relative; /* ラインを引くための位置指定 */
     padding-bottom: 10px; /* ラインとテキストの間隔 */
@@ -397,8 +392,6 @@ h2::after {
     margin: auto; /* 中央寄せ */
     width: 99%; /* 幅を100% */
 }
-
-
 
 .slider-container {
     width: 100%; /* 画像の幅に合わせる */

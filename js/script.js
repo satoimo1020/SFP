@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const elements = document.querySelectorAll('.hidden');
 
     function checkVisibility() {
-        const triggerBottom = window.innerHeight / 5 * 4;
+        const triggerBottom = window.innerHeight / 3 * 3;
 
         elements.forEach(element => {
             const box = element.getBoundingClientRect();
@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
 document.addEventListener('scroll', function() {
     const scrollY = window.scrollY;
 
@@ -41,7 +40,6 @@ document.addEventListener('scroll', function() {
     document.querySelector('.shape2').style.transform = `translateY(${scrollY * -0.3}px)`;
     document.querySelector('.shape3').style.transform = `translateY(${scrollY * -0.7}px)`;
 });
-
 
 
 window.addEventListener("load", function() {
